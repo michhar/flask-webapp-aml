@@ -4,19 +4,22 @@ Routes and views for the flask application.
 import json
 import urllib
 
+from os import environ
 from datetime import datetime
 from flask import render_template, request, redirect
 from FlaskAppKMeans import app
 from FlaskAppKMeans.forms import SubmissionForm
 
-API_KEY = 'bqbOx/ih7sqf0YpFbTEBf9wyPA7WPcGGOomvMrTvwq4CC0KxgVPkU2grDnzYN/zqpx5xFUNWl1LOEK+C8L5zMw=='
-URL = 'https://ussouthcentral.services.azureml.net/workspaces/db57e3c91aeb4c4c8c5b831eb3aa0bd5/services/375cb1234d0d4dc0b29774e6212acee5/execute?api-version=2.0&details=true'
+# Set some request global variables
 HEADERS = {'Content-Type':'application/json', 'Authorization':('Bearer '+ API_KEY)}
+API_KEY = environ.get('API_KEY') # a deployment environment variable defined on Azure
+URL = environ.get('URL') # a deployment environment variable defined on Azure
 
+# Our main app page/route
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    """Renders the home page which is the CNS of the web app currently."""
+    """Renders the home page which is the CNS of the web app currently, nothing pretty."""
 
     form = SubmissionForm(request.form)
 
