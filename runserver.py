@@ -1,9 +1,9 @@
 """
-This script runs the FlaskAppKMeans application using a development server.
+This script runs the FlaskAppAML application using a development server.
 """
 
 from os import environ
-from FlaskAppKMeans import app
+from FlaskAppAML import app
 
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'localhost')

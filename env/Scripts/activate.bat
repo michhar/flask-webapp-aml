@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\michhar\Documents\bin\github\flask-webapp-aml\env"
+set "VIRTUAL_ENV=c:\users\michhar\documents\visual studio 2017\Projects\FlaskAppAML\FlaskAppAML\env"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

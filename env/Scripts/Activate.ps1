@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\Users\michhar\Documents\bin\github\flask-webapp-aml\env"
+$env:VIRTUAL_ENV="c:\users\michhar\documents\visual studio 2017\Projects\FlaskAppAML\FlaskAppAML\env"
 
 # Set the prompt to include the env name
 # Make sure _OLD_VIRTUAL_PROMPT is global

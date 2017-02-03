@@ -2,18 +2,18 @@
 Routes and views for the flask application.
 """
 import json
-import urllib
+import urllib.request
 
-from os import environ
+import os
 from datetime import datetime
 from flask import render_template, request, redirect
-from FlaskAppKMeans import app
-from FlaskAppKMeans.forms import SubmissionForm
+from FlaskAppAML import app
+from FlaskAppAML.forms import SubmissionForm
 
 # Set some request global variables
+API_KEY = os.environ.get('API_KEY', 'bqbOx/ih7sqf0YpFbTEBf9wyPA7WPcGGOomvMrTvwq4CC0KxgVPkU2grDnzYN/zqpx5xFUNWl1LOEK+C8L5zMw==') # a deployment environment variable defined on Azure
+URL = os.environ.get('URL', 'https://ussouthcentral.services.azureml.net/workspaces/db57e3c91aeb4c4c8c5b831eb3aa0bd5/services/375cb1234d0d4dc0b29774e6212acee5/execute?api-version=2.0&details=true') # a deployment environment variable defined on Azure
 HEADERS = {'Content-Type':'application/json', 'Authorization':('Bearer '+ API_KEY)}
-API_KEY = environ.get('API_KEY') # a deployment environment variable defined on Azure
-URL = environ.get('URL') # a deployment environment variable defined on Azure
 
 # Our main app page/route
 @app.route('/', methods=['GET', 'POST'])
@@ -26,7 +26,9 @@ def home():
     # Form has been submitted
     if request.method == 'POST' and form.validate():
 
-        # Plug in the data into a dictionary object
+        # Plug in the data into a dictionary object 
+        #  - data from the input form
+        #  - text data must be converted to lowercase
         data =  {
               "Inputs": {
                 "input1": {
@@ -46,24 +48,26 @@ def home():
               "GlobalParameters": {}
             }
 
-        # Serialize the data into json
+        # Serialize the input data into json string
         body = str.encode(json.dumps(data))
 
         # Formulate the request
         req = urllib.request.Request(URL, body, HEADERS)
 
-        # Send this request to the AML service
+        # Send this request to the AML service and render the results on page
         try:
+            # response = requests.post(URL, headers=HEADERS, data=body)
             response = urllib.request.urlopen(req)
-            result = response.read()
-            print(result)
+            respdata = response.read()
+            result = json.loads(str(respdata, 'utf-8'))
+            result = json.dumps(result, indent=4, sort_keys=True)
             return render_template(
                 'result.html',
-                title='Successful request!',
+                title="From your friendly AML experiment's Web Service:",
                 result=result)
 
         # An HTTP error
-        except urllib.error.HTTPError as err:
+        except Exception as err:
             result = json.loads(str(err.code))
             return render_template(
                 'result.html',
@@ -73,7 +77,10 @@ def home():
     # Just serve up the input form
     return render_template(
         'form.html',
-        form=form)
+        form=form,
+        title='Run App',
+        year=datetime.now().year,
+        message='Input form to gain insights into a company using Azure Machine Learning')
 
 
 @app.route('/contact')
