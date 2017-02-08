@@ -1,0 +1,9 @@
+xmlrpclib
+socket
+PythonBuildersTest
+collections
+support
+test_main
+errno
+sys
+unittest

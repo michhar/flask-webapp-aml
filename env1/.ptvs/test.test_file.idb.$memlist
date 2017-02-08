@@ -1,0 +1,17 @@
+pyio
+TESTFN
+proxy
+tearDownModule
+PyAutoFileTests
+os
+run_unittest
+CAutoFileTests
+sys
+io
+array
+PyOtherFileTests
+AutoFileTests
+OtherFileTests
+UserList
+COtherFileTests
+unittest

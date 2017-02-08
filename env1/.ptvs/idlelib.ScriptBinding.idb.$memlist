@@ -1,0 +1,9 @@
+idleConf
+PyShell
+macosxSupport
+tabnanny
+ScriptBinding
+tokenize
+os
+indent_message
+tkMessageBox

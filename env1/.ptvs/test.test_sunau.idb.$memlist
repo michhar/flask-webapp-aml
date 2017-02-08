@@ -1,0 +1,12 @@
+byteswap
+audiotests
+SunauPCM32Test
+SunauPCM16Test
+SunauPCM24Test
+SunauULAWTest
+SunauPCM8Test
+SunauTest
+TESTFN
+sunau
+sys
+unittest

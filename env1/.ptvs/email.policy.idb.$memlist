@@ -1,0 +1,14 @@
+Policy
+_extend_docstrings
+SMTPUTF8
+__all__
+_has_surrogates
+strict
+HTTP
+EmailPolicy
+compat32
+raw_data_manager
+HeaderRegistry
+SMTP
+Compat32
+default

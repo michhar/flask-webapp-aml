@@ -1,0 +1,4 @@
+run_regrtests
+TESTS
+subprocess
+sys

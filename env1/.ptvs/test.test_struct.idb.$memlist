@@ -1,0 +1,16 @@
+sys
+ISBIGENDIAN
+abc
+StructTest
+bigendian_to_native
+struct
+UnpackIteratorTest
+support
+string_reverse
+array
+HAVE_LONG_LONG
+operator
+byteorders
+iter_integer_formats
+unittest
+integer_codes

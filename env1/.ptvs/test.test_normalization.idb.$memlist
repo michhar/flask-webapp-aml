@@ -1,0 +1,17 @@
+sys
+NFKD
+check_version
+NFC
+HTTPException
+os
+TESTDATAURL
+unittest
+open_urlresource
+NFKC
+unidata_version
+TESTDATAFILE
+NFD
+RangeError
+NormalizationTest
+unistr
+normalize

@@ -1,0 +1,10 @@
+site_packages
+this_dir
+os
+win32api
+run_test
+maybes
+distutils
+find_and_run
+sys
+subprocess

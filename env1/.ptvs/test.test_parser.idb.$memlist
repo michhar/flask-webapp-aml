@@ -1,0 +1,13 @@
+CompileTestCase
+assert_python_failure
+operator
+ParserStackLimitTestCase
+OtherParserCase
+STObjectTestCase
+parser
+support
+RoundtripLegalSyntaxTestCase
+struct
+IllegalSyntaxTestCase
+sys
+unittest

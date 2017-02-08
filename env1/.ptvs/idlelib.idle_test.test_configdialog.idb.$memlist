@@ -1,0 +1,6 @@
+macosx
+ConfigDialog
+requires
+Tk
+unittest
+ConfigDialogTest

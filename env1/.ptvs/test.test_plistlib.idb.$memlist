@@ -1,0 +1,15 @@
+collections
+ALL_FORMATS
+BytesIO
+os
+binascii
+TESTDATA
+TestPlistlib
+datetime
+codecs
+support
+struct
+plistlib
+test_main
+TestPlistlibDeprecated
+unittest

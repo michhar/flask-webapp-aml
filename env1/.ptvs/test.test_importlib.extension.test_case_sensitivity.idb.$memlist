@@ -1,0 +1,9 @@
+_bootstrap_external
+util
+Source_ExtensionCaseSensitivity
+ExtensionModuleCaseSensitivityTest
+support
+machinery
+Frozen_ExtensionCaseSensitivity
+sys
+unittest

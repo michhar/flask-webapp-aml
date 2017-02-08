@@ -1,0 +1,12 @@
+AudioWriteTests
+unlink
+pickle
+AudioTestsWithSourceFile
+UnseekableIO
+array
+findfile
+AudioTests
+TESTFN
+io
+sys
+unittest

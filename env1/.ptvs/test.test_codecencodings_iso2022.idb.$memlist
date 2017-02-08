@@ -1,0 +1,7 @@
+multibytecodec_support
+Test_ISO2022_KR
+Test_ISO2022_JP
+support
+COMMON_CODEC_TESTS
+Test_ISO2022_JP2
+unittest

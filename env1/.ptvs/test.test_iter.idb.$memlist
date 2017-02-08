@@ -1,0 +1,16 @@
+sys
+TESTFN
+test_main
+TRIPLETS
+pickle
+collections
+run_unittest
+UnlimitedSequenceClass
+unlink
+IteratingSequenceClass
+BasicIterClass
+check_free_after_iterating
+SequenceClass
+TestCase
+cpython_only
+unittest

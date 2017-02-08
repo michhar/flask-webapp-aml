@@ -1,0 +1,17 @@
+compat32
+NeedMoreData
+errors
+headerRE
+NL
+NLCRE_eol
+FeedParser
+NLCRE_crack
+__all__
+deque
+NLCRE
+message
+re
+NLCRE_bol
+EMPTYSTRING
+BufferedSubFile
+BytesFeedParser

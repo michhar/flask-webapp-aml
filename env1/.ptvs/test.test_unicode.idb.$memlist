@@ -1,0 +1,15 @@
+itertools
+_string
+UnicodeTest
+duplicate_string
+operator
+string_tests
+warnings
+search_function
+codecs
+support
+StrSubclass
+struct
+StringModuleTest
+sys
+unittest

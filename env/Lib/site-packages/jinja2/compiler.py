@@ -734,12 +734,13 @@ class CodeGenerator(NodeVisitor):
                 self.indent()
                 self.writeline('if parent_template is not None:')
             self.indent()
-            if supports_yield_from:
+            if supports_yield_from and not self.environment.is_async:
                 self.writeline('yield from parent_template.'
                                'root_render_func(context)')
             else:
-                self.writeline('for event in parent_template.'
-                               'root_render_func(context):')
+                self.writeline('%sfor event in parent_template.'
+                               'root_render_func(context):' %
+                               (self.environment.is_async and 'async ' or ''))
                 self.indent()
                 self.writeline('yield event')
                 self.outdent()
@@ -1039,6 +1040,9 @@ class CodeGenerator(NodeVisitor):
                            self.func('loop'), node)
             self.indent()
             self.buffer(loop_frame)
+
+            # Use the same buffer for the else frame
+            else_frame.buffer = loop_frame.buffer
 
         # make sure the loop variable is a special one and raise a template
         # assertion error if a loop tries to write to loop

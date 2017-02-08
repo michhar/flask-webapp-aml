@@ -1,0 +1,13 @@
+GeneralMappingTests
+string
+pickle
+weakref
+DictTest
+Dict
+collections
+support
+mapping_tests
+random
+gc
+SubclassMappingTests
+unittest

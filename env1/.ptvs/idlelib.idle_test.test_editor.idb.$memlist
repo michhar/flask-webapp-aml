@@ -1,0 +1,6 @@
+Text
+Editor_func_test
+unittest
+requires
+Tk
+EditorWindow

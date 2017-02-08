@@ -1,0 +1,13 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h3>{{ title }}</h3>
+
+{{ result|safe }}
+
+<h3>Confusion Matrix from the Original AML Training Experiment (this is a static image for reference)</h3>
+In an unsupervised method such as k-eans clustering the outcome (Category) variable is not used in the training process, but rather simply to illustrate which Category most closely associates with a cluster assignment as can seen below.  The numbers are the counts of companies falling into that cluster by Category name.  Assignments are the cluster assignments in integer form starting at 0.  We have 10 cluster assignments because we specified 10 as the number of centroids in the training process using our k-means algorithm.<br /><br />
+<img src="/static/images/confusion_matrix.png" />
+
+{% endblock %}

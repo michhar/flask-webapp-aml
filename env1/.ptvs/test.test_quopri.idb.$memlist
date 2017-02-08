@@ -1,0 +1,10 @@
+os
+withpythonimplementation
+DECSAMPLE
+ENCSAMPLE
+subprocess
+quopri
+QuopriTestCase
+io
+sys
+unittest

@@ -1,0 +1,11 @@
+findfile
+os
+imghdr
+warnings
+TEST_FILES
+TestImghdr
+unlink
+UnseekableIO
+TESTFN
+io
+unittest

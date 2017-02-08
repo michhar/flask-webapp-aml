@@ -1,0 +1,16 @@
+sys
+html
+PosReturn
+CodecCallbackTest
+NoStartUnicodeTranslateError
+BadStartUnicodeEncodeError
+unittest
+unicodedata
+test
+codecs
+NoEndUnicodeDecodeError
+warnings
+BadObjectUnicodeDecodeError
+NoObjectUnicodeTranslateError
+BadObjectUnicodeEncodeError
+NoEndUnicodeTranslateError

@@ -1,0 +1,15 @@
+ExtensionTests
+ThreadTests
+unlink
+suite
+sqlite
+threading
+ClosedConTests
+CursorTests
+ClosedCurTests
+ConstructorTests
+ConnectionTests
+ModuleTests
+TESTFN
+test
+unittest
